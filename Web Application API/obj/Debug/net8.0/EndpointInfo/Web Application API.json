@@ -1,0 +1,183 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Web Application API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Crud/Post": {
+      "post": {
+        "tags": [
+          "Crud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Crud/Put": {
+      "put": {
+        "tags": [
+          "Crud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Crud/Delete": {
+      "delete": {
+        "tags": [
+          "Crud"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Crud/Get": {
+      "get": {
+        "tags": [
+          "Crud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InsertRequest": {
+        "required": [
+          "build",
+          "kb",
+          "machinePool",
+          "release",
+          "runType"
+        ],
+        "type": "object",
+        "properties": {
+          "runType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "release": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "kb": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "build": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "machinePool": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRequest": {
+        "required": [
+          "build",
+          "kb",
+          "machinePool",
+          "release",
+          "runType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "runType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "release": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "kb": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "build": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "machinePool": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

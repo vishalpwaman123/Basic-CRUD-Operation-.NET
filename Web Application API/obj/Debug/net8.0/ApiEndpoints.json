@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "Web_Application_API.Controllers.CrudController",
+    "Method": "Delete",
+    "RelativePath": "api/Crud/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Application_API.Controllers.CrudController",
+    "Method": "Get",
+    "RelativePath": "api/Crud/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Application_API.Controllers.CrudController",
+    "Method": "Post",
+    "RelativePath": "api/Crud/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_Application_API.Model.InsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Application_API.Controllers.CrudController",
+    "Method": "Put",
+    "RelativePath": "api/Crud/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_Application_API.Model.UpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
